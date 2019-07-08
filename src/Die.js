@@ -7,20 +7,10 @@ import classNames from 'classnames';
 class Die extends Component{
     constructor(props){
         super(props);
-        this.faceNumToStr = {
-            1: 'one',
-            2: 'two',
-            3: 'three',
-            4: 'four',
-            5: 'five',
-            6: 'six',
-        }
     }
 
     render(){
-        let faceNum = this.props.face;
-        let shake = this.props.anim;
-        let iconClasses = classNames(shake ? 'Die-roll' : '', "fas fa-7x fa-dice-"+ this.faceNumToStr[faceNum]);
+        let iconClasses = classNames(this.props.dieRoll ? 'Die-roll' : '', "fas fa-7x fa-dice-"+ this.props.face);
         return (
             <div className="Die">
                 <i className={iconClasses}></i>
