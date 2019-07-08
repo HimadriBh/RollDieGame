@@ -32,7 +32,7 @@ class RollDie extends Component{
             <div className='RollDie'>
                 <Die face={this.state.die1} dieRoll={this.state.rolling}/>
                 <Die face={this.state.die2} dieRoll={this.state.rolling}/>
-                <button className="RollDie-button" onClick={this.roll}>
+                <button className="RollDie-button" onClick={this.roll} disabled={this.state.rolling}>
                 {
                 this.state.rolling
                 ? 'Rolling...'
